@@ -1,0 +1,8 @@
+.drop-zone {
+    height: 100%;
+    border: black 1px dashed;
+}
+
+.drop-zone:hover {
+    cursor: pointer;
+}
