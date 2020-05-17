@@ -1,8 +1,11 @@
+@font-face {
+  font-family: '8b-wonder';
+  src: url('./assets/fonts/8-BIT WONDER.TTF');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: '8b-wonder', SansSerif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
