@@ -24,9 +24,11 @@ export default function CatForm({cat, onSubmit}: CatFormProps) {
 
     useEffect(() => {
         if (cat) {
-            console.log('we have a cat');
+            Object.keys(cat).forEach((key: string) => {
+                setValue(key, (cat as any)[key], true);
+            });
         }
-    }, [cat])
+    }, [cat, setValue])
 
     const dropZoneValueChanged = (key: string, value: string) => {
         setValue(key, value);
@@ -63,6 +65,7 @@ export default function CatForm({cat, onSubmit}: CatFormProps) {
                         name="height"
                         label="Height"
                         suffix="cm"
+                        type="number"
                         register={register}
                         errors={errors}
                         placeHolder="Cat Height"

@@ -10,17 +10,18 @@ interface CatDetailsViewerProps {
 const styles: { [key: string]: CSSProperties } = {
     card: {
         display: 'flex',
-        width: '600px'
+        maxWidth: '600px'
     },
     img: {
-        maxWidth: '400px'
+        flex: '1 1 70%'
     },
     summary: {
         display: 'flex',
         width: '100%',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        flex: '1 1 30%'
     },
     edit: {
         position: 'absolute',

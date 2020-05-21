@@ -10,13 +10,6 @@ interface CreateCatProps extends RouteComponentProps {
     actions: any;
 }
 
-const styles = {
-    container: {
-        height: '100vh',
-        width: '100%'
-    }
-}
-
 function CreateCat({actions, history}: CreateCatProps) {
 
     const onSubmit = (data: Cat) => {
@@ -25,7 +18,7 @@ function CreateCat({actions, history}: CreateCatProps) {
     };
 
     return (
-        <div className="container d-flex align-items-center justify-content-center" style={styles.container}>
+        <div className="d-flex align-items-center justify-content-center">
             <CatForm onSubmit={onSubmit}/>
         </div>
     );

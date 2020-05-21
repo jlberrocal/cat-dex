@@ -16,7 +16,7 @@ const styles: { [key: string]: CSSProperties } = {
     container: {
         display: 'flex',
         flexDirection: 'column-reverse',
-        height: '100vh',
+        height: '100%',
         justifyContent: 'center',
         alignItems: 'center'
     }

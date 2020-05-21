@@ -7,6 +7,7 @@ import CatDetails from './pages/CatDetails';
 import EditCat from './pages/EditCat';
 import Navbar from 'react-bootstrap/Navbar';
 import BackButton from './Components/BackButton';
+import Container from 'react-bootstrap/Container';
 
 function App() {
 
@@ -20,19 +21,21 @@ function App() {
                     </span>
                 </Navbar.Brand>
             </Navbar>
-            <Switch>
-                <Route exact path="/cats/new" component={CreateCat}/>
+            <Container>
+                <Switch>
+                    <Route exact path="/cats/new" component={CreateCat}/>
 
-                <Route exact path="/cats/:catId" component={CatDetails}/>
+                    <Route exact path="/cats/:catId" component={CatDetails}/>
 
-                <Route exact path="/cats/:catId/edit" component={EditCat}/>
+                    <Route exact path="/cats/:catId/edit" component={EditCat}/>
 
-                <Route exact path="/" component={HomePage}/>
+                    <Route exact path="/" component={HomePage}/>
 
-                <Route path="*">
-                    404 page
-                </Route>
-            </Switch>
+                    <Route path="*">
+                        404 page
+                    </Route>
+                </Switch>
+            </Container>
         </BrowserRouter>
     );
 }

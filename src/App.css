@@ -40,3 +40,7 @@
 .light {
   color: whitesmoke;
 }
+
+.container {
+  padding: 15px;
+}

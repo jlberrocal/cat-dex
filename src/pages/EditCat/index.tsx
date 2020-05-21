@@ -11,13 +11,6 @@ interface EditCatProps extends RouteComponentProps {
     cat: Cat;
 }
 
-const styles = {
-    container: {
-        height: '100vh',
-        width: '100%'
-    }
-}
-
 function EditCat({cat, actions, history}: EditCatProps) {
     const onSubmit = (data: Cat) => {
         actions.addCat(data);
@@ -25,7 +18,7 @@ function EditCat({cat, actions, history}: EditCatProps) {
     };
 
     return (
-        <div className="container d-flex align-items-center justify-content-center" style={styles.container}>
+        <div className="container d-flex align-items-center justify-content-center">
             <CatForm onSubmit={onSubmit} cat={cat}/>
         </div>
     );
