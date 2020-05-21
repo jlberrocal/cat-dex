@@ -1,8 +1,14 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
+@font-face {
+  font-family: '8bits';
+  src: url("/fonts/8-Bit Madness.ttf");
+}
+
 body {
   margin: 0;
   background-color: whitesmoke;
+  font-family: '8bits', Arial, sans-serif;
 }
 
 #mapId {

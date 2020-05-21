@@ -1,17 +1,24 @@
 import React, {createRef, useEffect} from 'react';
-import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
+import {Map, Marker, TileLayer} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import L, {LatLngTuple} from 'leaflet';
+import {icon, LatLngTuple} from 'leaflet';
+import marker from 'leaflet/dist/images/marker-icon.png'
 
-// @ts-ignore
-const customMarker: L.Icon = new L.icon({
-    iconUrl: "https://unpkg.com/leaflet@1.4.0/dist/images/marker-icon.png",
+interface CatPositionProps {
+    position: LatLngTuple;
+}
+
+const customMarker = icon({
+    iconUrl: marker,
     iconSize: [25, 41],
     iconAnchor: [13, 0]
 });
 
-interface CatPositionProps {
-    position: LatLngTuple;
+const styles = {
+    map: {
+        width: '600px',
+        height: '600px'
+    }
 }
 
 export default function CatPosition({position}: CatPositionProps) {
@@ -24,18 +31,9 @@ export default function CatPosition({position}: CatPositionProps) {
     }, [ref]);
 
     return (
-        <Map ref={ref} id="mapId" style={{height: "600px", width: '600px', display: 'flex'}} center={position} zoom={8}>
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            />
-            <Marker position={position} icon={customMarker}>
-                <Popup>
-                    A pretty CSS3 popup.
-                    <br/>
-                    Easily customizable.
-                </Popup>
-            </Marker>
+        <Map ref={ref} id="mapId" style={styles.map} center={position} zoom={8}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+            <Marker position={position} icon={customMarker}/>
         </Map>
     )
 }

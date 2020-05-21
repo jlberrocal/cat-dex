@@ -10,7 +10,9 @@ export const addCat = (cat: Cat) => {
 export const removeCat = (id: number) => {
     return {
         type: 'REMOVE_CAT',
-        payload: id
+        payload: {
+            id
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import CatList from '../../Containers/CatList/CatList';
-import FloatingButton from '../../Components/FloatingButton';
+import FloatingButton from '../../Components/AddNewButton';
 
 export default function Home() {
 

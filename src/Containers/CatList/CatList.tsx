@@ -30,8 +30,9 @@ function CatList({cats, actions}: CatListProps) {
         setModalOpen(false);
     }
 
-    let elements: JSX.Element[] = cats.map((cat, index) => <CatListItem key={index} openModal={handleOpenModal}
-                                                                        cat={cat}/>);
+    let elements: JSX.Element[] = cats.map((cat, index) =>
+        <CatListItem key={index} openModal={handleOpenModal} cat={cat}/>
+    );
 
     return (<div className="cards">
         {elements.length > 0

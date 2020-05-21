@@ -3,7 +3,8 @@ export interface Cat {
     name: string;
     breed: string;
     description: string;
-    colors: string;
     gender: 'M' | 'F' | null;
+    height: number;
+    weight: number;
     photo: string
 }
